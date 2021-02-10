@@ -1,0 +1,23 @@
+{
+  "name": "bridge",
+  "scripts": {
+    "start": "node ./start.js",
+    "migrate": "npx sequelize db:migrate --config db/config.js --migrations-path db/migrations",
+    "migrate:undo": "npx sequelize db:migrate:undo --config db/config.js --migrations-path db/migrations",
+    "migration:generate": "npx sequelize migration:generate --config db/config.js --migrations-path db/migrations"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "lodash": "^4.17.20",
+    "pg": "^8.5.1",
+    "sequelize": "^6.5.0",
+    "sequelize-cli": "^6.2.0"
+  },
+  "engines": {
+    "node": "14"
+  }
+}
